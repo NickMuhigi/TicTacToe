@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Tic Tac Toe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.0.2/tailwind.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-gray-800 text-white flex justify-center items-center h-screen">
+  <div class="text-center">
+    <h1 class="text-4xl mb-4">WELCOME TO TIC TAC TOE!</h1>
+    <p class="mb-6">Please enter your name to proceed:</p>
+    <input type="text" id="playerName" class="bg-gray-700 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline mb-4">
+    <!-- Add id to the button for JavaScript targeting -->
+    <button id="startGame" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline">Start Game</button>
+  </div>
+
+  <script>
+    // JavaScript to handle button click and redirect
+    document.getElementById('startGame').addEventListener('click', function() {
+      var playerName = document.getElementById('playerName').value;
+      // Redirect to game.html with player name as query parameter
+      window.location.href = './game.html?player=' + encodeURIComponent(playerName);
+    });
+  </script>
+
+</body>
+</html>
