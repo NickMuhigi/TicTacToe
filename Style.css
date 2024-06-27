@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
 * {
   font-family: "Press Start 2P", cursive;
   user-select: none;
@@ -51,9 +52,11 @@ body {
   transition: all 0.2s ease;
   box-shadow: -1.2px 2px 0px 0px #141d4c;
 }
+
 .board > span:hover {
   background: #6aa8d2;
 }
+
 .board > span:active {
   box-shadow: -1.2px 7.4px 0px -2.5px #141d4c;
 }
@@ -65,4 +68,26 @@ body {
 
 .win {
   background: #55efc4 !important;
+}
+
+.message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+  color: #285ca1;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.message.show {
+  opacity: 1;
 }
