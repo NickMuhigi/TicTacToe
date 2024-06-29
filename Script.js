@@ -60,7 +60,17 @@ function checkWin() {
       return true;
     }
   }
+  if (checkTie()) {
+    showMessage("It's a Tie!");
+    removeGameListeners(); // Disable further clicks
+    return true;
+  }
   return false;
+}
+
+// Function to check for a tie
+function checkTie() {
+  return arr.every(val => val !== null);
 }
 
 // Function to compare moves
