@@ -16,6 +16,10 @@ const wins = [
   [2, 4, 6]
 ];
 
+// Get the player's name from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const playerName = urlParams.get('player');
+
 // Function to initialize game event listeners
 function initGame() {
   reset.addEventListener('click', fnreset);
@@ -51,9 +55,9 @@ function checkWin() {
     let [a, b, c] = wins[i];
     if (cmp(arr[a], arr[b], arr[c])) {
       if (arr[a] === 'O') {
-        showMessage('YOU WON!');
+        showMessage(`${playerName}, You WON!`);
       } else if (arr[a] === 'X') {
-        showMessage('YOU LOSE!');
+        showMessage(`${playerName}, You LOSE!`);
       }
       highlightWinningCombo(a, b, c);
       removeGameListeners(); // Disable further clicks
@@ -61,7 +65,7 @@ function checkWin() {
     }
   }
   if (checkTie()) {
-    showMessage("It's a Tie!");
+    showMessage(`${playerName}, It's a TIE!`);
     removeGameListeners(); // Disable further clicks
     return true;
   }
