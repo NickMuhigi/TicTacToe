@@ -11,7 +11,8 @@
   <div class="text-center">
     <h1 class="text-4xl mb-4">WELCOME TO TIC TAC TOE!</h1>
     <p class="mb-6">Please enter your name to proceed:</p>
-    <input type="text" id="playerName" class="bg-gray-700 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline mb-4">
+    <input type="text" id="playerName" class="bg-gray-700 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline mb-4" placeholder="Enter your name">
+    <p id="nameReminder" class="text-red-500 text-sm mb-4 hidden">Enter your name to proceed</p>
     <!-- Add id to the button for JavaScript targeting -->
     <button id="startGame" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline">Start Game</button>
   </div>
@@ -19,9 +20,16 @@
   <script>
     // JavaScript to handle button click and redirect
     document.getElementById('startGame').addEventListener('click', function() {
-      var playerName = document.getElementById('playerName').value;
-      // Redirect to game.html with player name as query parameter
-      window.location.href = './game.html?player=' + encodeURIComponent(playerName);
+      var playerName = document.getElementById('playerName').value.trim(); // Trim whitespace
+
+      // Check if playerName is not empty
+      if (playerName) {
+        // Redirect to game.html with player name as query parameter
+        window.location.href = './game.html?player=' + encodeURIComponent(playerName);
+      } else {
+        // Show reminder message and prevent redirection
+        document.getElementById('nameReminder').classList.remove('hidden');
+      }
     });
   </script>
 </body>
