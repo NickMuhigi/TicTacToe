@@ -7,22 +7,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.0.2/tailwind.min.css">
   <link rel="stylesheet" href="./style.css">
 </head>
-<body class="w-screen h-screen ctr">
-  <div class="tabel ctr">
-    <div class="board">
-      <span id="col-0"></span>
-      <span id="col-1"></span>
-      <span id="col-2"></span>
-      <span id="col-3"></span>
-      <span id="col-4"></span>
-      <span id="col-5"></span>
-      <span id="col-6"></span>
-      <span id="col-7"></span>
-      <span id="col-8"></span>
+<body class="flex flex-col justify-between">
+  <div class="flex-grow flex items-center justify-center">
+    <div class="tabel ctr">
+      <div class="board">
+        <span id="col-0"></span>
+        <span id="col-1"></span>
+        <span id="col-2"></span>
+        <span id="col-3"></span>
+        <span id="col-4"></span>
+        <span id="col-5"></span>
+        <span id="col-6"></span>
+        <span id="col-7"></span>
+        <span id="col-8"></span>
+      </div>
+      <button id="reset">Reset</button>
     </div>
-    <button id="reset">Reset</button>
   </div>
   <div class="message"></div>
+  <div class="copyright p-4 bg-gray-800 text-white text-center">
+    &copy; Programmed By <a href="https://github.com/nicolasmuhigi" target="_blank" class="text-blue-400 hover:text-blue-600">Nicolas Muhigi</a>
+  </div>
   <script src="./script.js"></script>
 </body>
 </html>
