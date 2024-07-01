@@ -14,6 +14,39 @@ body {
   margin: 0;
 }
 
+.back-button {
+  margin: 20px;
+  color: #fff;
+  background-color: #1e4a7e;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.back-button:hover {
+  background-color: #163a5e;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 12px solid white; /* Changed to left arrow */
+  margin-right: 10px; /* Added margin to separate arrow from text */
+}
+
 .ctr {
   display: flex;
   justify-content: center;
@@ -72,7 +105,7 @@ body {
 #reset {
   margin-top: 14px;
   color: #fff;
-  background-color: #285ca1;
+  background-color: #1e4a7e;
   border: none;
   padding: 10px 20px;
   text-align: center;
@@ -85,7 +118,7 @@ body {
 }
 
 #reset:hover {
-  background-color: #1e4a7e;
+  background-color: #163a5e;
 }
 
 .win {
@@ -125,6 +158,6 @@ body {
   text-decoration: none;
 }
 
-.copyright a:hover {
+copyright a:hover {
   color: #6495ED;
 }
