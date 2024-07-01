@@ -1,12 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 * {
-  font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
+  font-family: 'Poppins', sans-serif;
   user-select: none;
 }
 
 body {
   background: #285ca1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
 }
 
 .ctr {
@@ -22,7 +27,10 @@ body {
   border-radius: 100%;
   border: 1px solid #0d152b;
   box-shadow: -2px 20px 0 -3px #4283c4, -20px 20px #0d152b;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .board {
@@ -64,7 +72,7 @@ body {
 #reset {
   margin-top: 14px;
   color: #fff;
-  background-color: #285ca1; /* Matching game theme blue */
+  background-color: #285ca1;
   border: none;
   padding: 10px 20px;
   text-align: center;
@@ -74,11 +82,10 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Poppins', sans-serif; /* Ensure consistent font */
 }
 
 #reset:hover {
-  background-color: #1e4a7e; /* Darker shade on hover */
+  background-color: #1e4a7e;
 }
 
 .win {
@@ -95,7 +102,6 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  font-family: 'Poppins', sans-serif;
   font-size: 2em;
   color: #285ca1;
   z-index: 9999;
@@ -105,4 +111,20 @@ body {
 
 .message.show {
   opacity: 1;
+}
+
+.copyright {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.copyright a {
+  color: #1E90FF;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  color: #6495ED;
 }
